@@ -7,8 +7,8 @@
 ####
 
 team_name = 'Brady Schroeder Team' # Only 10 chars displayed.
-strategy_name = 'Last move'
-strategy_description = 'Do oponnets last move.'
+strategy_name = 'Collude untill betray'
+strategy_description = 'Collude unless opponent betrayed'
     
 def move(my_history, their_history, my_score, their_score):
     ''' Arguments accepted: my_history, their_history are strings.
@@ -27,13 +27,10 @@ def move(my_history, their_history, my_score, their_score):
     # Decide whether to return 'c' or 'b'.
     
 
-    
-    if len(my_history)==0: 
-        return 'c'
-    elif their_history[-1]=='c':
-        return 'c'
-    else:
+    if 'b' in their_history:
         return 'b'
+    else:
+        return 'c'
     
         
          
